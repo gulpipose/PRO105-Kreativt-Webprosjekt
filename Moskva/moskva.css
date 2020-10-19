@@ -1,0 +1,863 @@
+/*Felleskode*/
+html, body {
+	height: 100%;
+	margin: 0;
+	background-image: linear-gradient(rgb(80, 130, 225), rgb(100, 150, 225), rgb(120, 170, 225));
+	font-family: 'Press Start 2P', cursive;
+}
+
+.mainContainer {
+	width: 5000px;
+	height: 750px;
+   /* position: relative;*/
+    bottom: 150px;
+	z-index: 1;
+    overflow-y: hidden;
+}
+
+.bottomContainer {
+	width: 5000px;
+	height: 150px;
+	position: absolute;
+	bottom: 0px;
+	background-image: url(Fellesbilder/bakke1.svg);
+	z-index: 2;
+	/*overflow: ;*/
+}
+/* Felleskode slutt */
+
+body::-webkit-scrollbar { opacity: 0; }
+
+/*GURO ØRBECH*/
+
+/* Start header*/
+#header, #headerBackground {
+    width: 290px;
+    height: 290px;
+    bottom: 500px;
+    left: 0px;
+}
+#header * {
+    position: absolute;
+}
+#header {
+    z-index: 10;
+}
+#headerBackground {
+    z-index: 11;
+}
+
+#title-1 {
+    z-index: 20;
+    text-align: center;
+    left: 50px;
+    bottom: 650px;
+}
+#flag, #logo {
+    bottom: 555px;
+    width: 100px;
+    z-index: 14;
+}
+#flag {
+    left: 30px;
+}
+#logo {
+    left: 150px;
+}
+
+#information {
+    position: absolute; 
+    height: 2px;
+    width: 2px;
+    left: 20px;
+    bottom: 700px;
+    background-color: rgb(245, 245, 245);
+    z-index: 20;
+    border-radius: 10px 10px 10px 10px;
+    border: 5px solid rgb(0, 0, 0);
+    opacity: 0;
+}
+
+#header:hover ~ #information {
+    opacity: 1;
+    height: 250px; 
+    width: 450px;
+    left: 20px; 
+    bottom: 300px;
+}
+/*header slutt*/
+
+/*Generellt*/
+.character {
+    position: absolute;
+    bottom: 150px;
+    width: 40px;
+    z-index: 4;
+}
+
+#mainCharacter {
+    left: 100px;
+    position: fixed;
+    z-index: 5;
+}
+
+.gameContainer {
+    height: 90%;
+    width: 800px;
+    bottom: 150px;
+    position: absolute; 
+}
+
+/*Dialog generell*/
+.dialogBox {
+    position: absolute;
+    bottom: 150px;
+    background: rgba(255, 255, 255, 0.8);
+    height: auto;
+    width: 250px;
+    opacity: 0;
+    z-index: 10;
+    border: 2px solid #000000;
+}
+
+.dialogBox p {
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    font-size: 10px;
+}
+
+/*Generell tre-plassering inni tre-container*/
+
+.tree{
+    position: absolute;
+    bottom: 149px;
+}
+
+#tree-1 {
+    height: 10%;
+    left: 50px;
+    z-index: 3;
+}
+#tree-2 {
+    height: 15%;
+    left: 100px;
+    z-index: 2;
+}
+#tree-3 {
+    height: 20%;
+    left: 200px;
+    z-index: 3;
+}
+#tree-4 {
+    height: 15%;
+    left: 300px;
+    z-index: 2;
+}
+
+
+/*Første scene - Moskva eksteriør*/
+#moscowExteriorContainer {
+    height: 90%;
+    width: 1255px;
+    bottom: 150px;
+    left: 0px;
+}
+
+#cathedral {
+    position: absolute;
+    left: 400px;
+    height: 70%;
+    bottom: 120px;
+    z-index: 2;
+}
+
+/*Trump-easter egg*/
+#easterEggContainer {
+    position: absolute;
+    left: 450px;
+    height: 630px;
+    width: 522px;
+    bottom: 120px;
+    z-index: 6;
+}
+
+#donaldTrump {
+    
+}
+
+/*Velkomst og Russisk dukkespill*/
+#russianDollGameContainer {
+    left: 250px;
+}
+
+#olga {
+    left: 150px;
+    bottom: 0px;
+}
+
+/*Dialog scene 1*/
+#dialogBoxWelcome-1 {
+    animation: showWelcomeDialog 4s ease-out 0s 1 normal;
+    left: 75px;
+}
+
+#dialogBoxWelcome-2 {
+    animation: showWelcomeDialog 4s ease-out 4s 1 normal;
+    left: 75px;
+}
+
+@keyframes showWelcomeDialog {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+/*Russiske dukker*/
+.russianDoll {
+    position: absolute;
+    opacity: 0;
+    z-index: 4;
+}
+
+#russianDoll-1:target {
+    opacity: 1;
+    left: 250px;
+    bottom: 0px;
+}
+
+#russianDoll-2:target {
+    opacity: 1;
+    left: 250px;
+    bottom: 0px;
+}
+
+#russianDoll-3:target {
+    opacity: 1;
+    left: 250px;
+    bottom: 0px;
+}
+
+#russianDoll-4:target{
+    opacity: 1;
+    left: 250px;
+    bottom: 0px;
+}
+
+/*Alle trær i scene 1*/
+#treeContainer-1 {
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: auto;
+    position: absolute;
+}
+
+#treeContainer-2 {
+    left: 800px;
+    bottom: 0px;
+    height: 100%;
+    width: auto;
+    position: absolute;
+    
+}
+
+/*Alle skyer og snøkrystaller - er i scene-1 container men går over hele. */
+.cloudContainer, .snowContainer{
+    height: 90%;
+    width: 628px;
+    bottom: 0px;
+    position: fixed;
+}
+
+/*sky-containere*/
+#cloudContainerTopLeft {
+    bottom: 150px;
+    left: -125px;
+    animation: MovingCloudsTopLeft 6s linear 0s infinite alternate;
+}
+
+#cloudContainerTopRight {
+    bottom: 150px;
+    left: 595px;
+    animation: MovingCloudsTopRight 6s linear 0s infinite alternate;
+}
+
+#cloudContainerBotLeft {
+    bottom: -20px;
+    left: -150px;
+    animation: MovingCloudsBotLeft 6s linear 0s infinite alternate;
+}
+
+#cloudContainerBotRight {
+    bottom: -20px;
+    left: 600px;
+    animation: MovingCloudsBotRight 6s linear 0s infinite alternate;
+}
+
+/*sky-strl*/
+.cloudSmall {
+    position: absolute;
+    height: 150px;
+    bottom: 300px;    
+}
+
+.cloudMedium {
+    position: absolute;
+    height: 350px; 
+    bottom: 200px;
+}
+
+.cloudBig {
+    position: absolute;
+    height: 500px;
+    bottom: 100px;
+    z-index: 3
+}
+
+/*hver enkelt sky i hver skycontainer*/
+#cloud-1 {
+    left: 100px;
+}
+#cloud-2 {
+    left: 100px;
+}
+#cloud-3 {
+    left: 250px;
+}
+#cloud-4 {
+    left: 350px;
+}
+#cloud-5 {
+    left: 450px;
+}
+#cloud-6 {
+    left: 600px;
+}
+
+/*Sky-animasjoner*/
+@keyframes MovingCloudsTopLeft {
+    0% {bottom: 150px; left: -125px;}
+    50% {bottom: 160px; left: -120px;}
+    100% {bottom: 175px; left: -115px;}
+}
+@keyframes MovingCloudsTopRight {
+    0% {bottom: 150px; left: 595px;}
+    50% {bottom: 160px; left: 600px;}
+    100% {bottom: 175px; left: 605px;}
+}
+@keyframes MovingCloudsBotLeft {
+    0% {bottom: -20px; left: -125px;}
+    50% {bottom: -10px; left: -120px;}
+    100% {bottom: 0px; left: -115px;}
+}
+@keyframes MovingCloudsBotRight {
+    0% {bottom: -20px; left: 595px;}
+    50% {bottom: -10px; left: 600px;}
+    100% {bottom: 0px; left: 605px;}
+}
+
+/*Snø-konteinere*/
+.snowcontainer {
+    position: absolute;
+}
+#snowContainerTopLeft {
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+    animation: MovingSnowLeft 10s linear -0s infinite normal;
+}
+
+#snowContainerTopRight {
+    bottom: 0px;
+    left: 800px;
+    z-index: 2;
+    animation: MovingSnowRight 10s linear -0s infinite normal;
+}
+
+#snowContainerBotLeft {
+    bottom: -150px;
+    left: 0px;
+    z-index: 2;
+    animation: MovingSnowLeft 10s linear -3s infinite normal;
+
+}
+
+#snowContainerBotRight {
+    bottom: -150px;
+    left: 800px;
+    z-index: 2;
+    animation: MovingSnowRight 10s linear -3s infinite normal;
+}
+
+/*hver enkel snøkrystall-img*/
+.snowCrystal {
+    height: 100px;
+    position: relative;
+}
+
+#snowCrystal-1 {
+    left: 50px;
+}
+#snowCrystal-2 {
+    left: 175px;
+}
+#snowCrystal-3 {
+    left: 300px;
+}
+
+/*Snø-animasjoner*/
+@keyframes MovingSnowLeft {
+    0% {bottom: 0px; left: 800px;}
+    10% {bottom: -50px; left: 815px;}
+    20% {bottom: -100px; left: 800px;}
+    30% {bottom: -150px; left: 815px;}
+    40% {bottom: -200px; left: 800px;}
+    50% {bottom: -250px; left: 815px;}
+    60% {bottom: -300px; left: 800px;}
+    70% {bottom: -350px; left: 815px;}
+    80% {bottom: -400px; left: 800px;}
+    90% {bottom: -450px; left: 815px;}
+    100% {bottom: -500px; left: 800px;}
+}
+
+@keyframes MovingSnowRight {
+    0% {bottom: 0px; left: 0px;}
+    10% {bottom: -50px; left: -15px;}
+    20% {bottom: -100px; left: 0px;}
+    30% {bottom: -150px; left: -15px;}
+    40% {bottom: -200px; left: 0px;}
+    50% {bottom: -250px; left: -15px;}
+    60% {bottom: -300px; left: 0px;}
+    70% {bottom: -350px; left: -15px;}
+    80% {bottom: -400px; left: 0px;}
+    90% {bottom: -450px; left: -15px;}
+    100% {bottom: -500px; left: 0px;}
+}
+/*Første scene - slutt*/
+
+/*Andre scene - Moskva T-banestasjon*/
+
+#moscowStationContainer {
+    position: absolute;
+    height: 700px;
+    width: 1985px;
+    left: 1255px;
+    bottom: 150px;
+    overflow: hidden;
+}
+#moscowStationContainer *{
+    position: absolute;
+}
+
+#stationBackground {
+    position: absolute;
+    height: 90%;
+    width: 1985px;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgb(100, 100, 100); 
+    z-index: 3;
+}
+
+/*Inngang stasjon*/
+
+#stationEntrance {
+    height: 100%;
+    z-index: 6;
+    bottom: 0px;
+    left: 0px;
+}
+
+#stationEntranceSign {
+    position: absolute;
+    bottom: 475px;
+    left: 0px;
+    height: 100px;
+    width: 290px;
+    z-index: 12;
+}
+
+#stationEntranceSign h3 {
+    text-align: center;
+    color: rgb(170, 0 , 0);
+    padding-top: 45px;
+    padding-left: 60px;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 12;
+}
+
+/*Tiles for interiør*/
+
+.stationTile{
+    height: 100%;
+    z-index: 4;
+    bottom: 0px;
+}
+
+#stationTile-1{
+    left: 290px;
+}
+#stationTile-2{
+    left: 855px;
+    
+}
+#stationTile-3{
+    left: 1420px;
+}
+
+/*Tbane som kjører inn og ut*/
+#subwayCarContainer {
+    left: 290px;
+    width: 24000px;
+    height: 100%;
+    overflow: hidden;
+    
+}
+
+#subwayCar {
+    left: -1200px;
+    width: 1200px;
+    bottom: -375px;
+    position: relative;
+    z-index: 3;
+    animation: movingSubwayCar 5s linear 0s infinite normal;
+}
+
+@keyframes movingSubwayCar {
+    0% {left: -1200px;}
+    25% {left: 0px;}
+    50%{left: 0px;}
+    75%{left: 0px;}
+    90%{left: 1000px;}
+    100% {left: 2000px;}
+}
+
+/*Lysekroner*/
+.chandelier {
+    height: 150px;
+    bottom: 450px;
+    position: relative;
+    z-index: 7;
+}
+
+#chandelier-1 {
+    left: 500px;
+}
+#chandelier-2 {
+    left: 1060px;
+}
+#chandelier-3 {
+    left: 1630px;
+}
+
+.chandelier:hover {
+    animation: chandelierSwing 0.5s linear 0s infinite alternate;
+
+}
+
+@keyframes chandelierSwing {
+    0%{transform: rotate(20deg)}
+    100%{transform: rotate(-20deg)}
+}
+
+/*Skru lyset av og på med en knapp*/
+.trigger, .trigger img {
+    position: absolute;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    z-index: 15;
+}
+
+#triggerLightsOff {
+    left: 0px;
+}
+
+#moscowStationContainer:target {
+    z-index: 2;
+    animation: lightsOff 10s linear 1 normal;
+}
+
+@keyframes lightsOff {
+    0% {filter: grayscale(0%);}
+    10% {filter: grayscale(100%);}
+    50% {filter: grayscale(100%);}
+    100% {filter: grayscale(0%);}
+}
+
+/*Edward Snowden interaksjoner*/
+
+#snowdenInteractionContainer {
+    position: absolute;
+    left: 0px;
+    height; 700px;
+    width: 1985px;
+    bottom: 0px;
+}
+
+#edwardSnowden {
+    left: 750px;
+    bottom: 0px; 
+    z-index: 20;
+}
+
+/*Snowden dialog*/
+#dialogBoxSnowden-1 {
+    height: 100px;
+    width: 200px;
+    left: 700px;
+    bottom: 100px;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 14;
+}
+
+#text-1 {
+    z-index: 2;
+}
+
+#text-2 {
+    bottom: 0px;
+    color: rgba(255, 255, 255, 1);
+}
+
+#dialogBoxSnowden-1:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+
+/*Hjerter som kommer etter klem*/
+.heart {
+    /*position: absolute;*/
+    z-index: 16;
+} 
+
+#heartSmall {
+    left: 90px;
+    height: 50px; 
+}
+#heartMedium {
+    height: 75px;
+} 
+#heartBig {
+    left: 40px;
+    bottom: 0px;
+    height: 100px;
+}
+
+#giveAHug {
+    height: 80px;
+    width: 40px;
+    left: 750px;
+    bottom: 0px;
+    z-index: 50;
+}
+
+#hugHearts {
+    left: 700px;
+    width: 140px;
+    opacity: 0;
+}
+
+#hugHearts:target {
+    bottom: 1000px;
+    opacity: 1;
+    animation: movingHugHearts 2s linear -0.5s 1 normal;
+}
+
+@keyframes movingHugHearts {
+    0% {bottom: 0px;}
+    5% {bottom: 10px; left: 690px;}
+    10% {bottom: 20px; left: 700px;}
+    15% {bottom: 40px; left: 710px;}
+    20% {bottom: 60px; left: 700px;}
+    25% {bottom: 80px; left: 690px;}
+    30% {bottom: 100px; left: 700px;}
+    35% {bottom: 120px; left: 710px;}
+    40% {bottom: 140px; left: 700px;}
+    45% {bottom: 160px; left: 690px;}
+    50% {bottom: 180px; left: 700px;}
+    55% {bottom: 200px; left: 710px;}
+    60% {bottom: 220px; left: 700px;}
+    65% {bottom: 240px; left: 690px;}
+    70% {bottom: 260px; left: 700px;}
+    75% {bottom: 280px; left: 710px;}
+    80% {bottom: 300px; left: 700px;}
+    85% {bottom: 340px; left: 690px;}
+    90% {bottom: 380px; left: 700px;}
+    95% {bottom: 420px; left: 710px;}
+    100% {bottom: 900px; left: 700px;}
+}
+/*Andre scene - slutt*/
+
+/*Tredje scene - ghosts of communist past*/
+#moscowGhostSceneContainer {
+    height: 90%;
+    width: 1760px;
+    bottom: 150px;
+    left: 3240px;
+    position: absolute;
+    overflow: hidden;
+}
+#moscowGhostSceneContainer * {
+    position: absolute;
+}
+
+/*Trær i scene 3*/
+#treeContainer-3 {
+    left: 50px;
+    bottom: -150px;
+    height: 100%;
+    width: auto;
+    position: absolute;
+}
+#treeContainer-4 {
+    left: 500px;
+    bottom: -150px;
+    height: 120%;
+    width: auto;
+    position: absolute;
+}
+#treeContainer-5 {
+    transform: scaleX(-1);
+    left: 700px;
+    bottom: -150px;
+    height: 100%;
+    width: 700px;
+    position: absolute;
+}
+#treeContainer-6 {
+    left: 1300px;
+    bottom: -150px;
+    height: 120%;
+    width: auto;
+    position: absolute;
+}
+
+/*Ghosts*/
+.ghostContainer {
+    bottom: 200px;
+    width: 200px;
+    z-index: 20;
+    filter: saturate(50%);
+}
+.ghostContainer * {
+    filter: blur(10px);
+    filter: saturate(150%);
+}
+.ghostContainer div {
+    height: 50px;
+    z-index: 20;
+    left: 50px;
+    bottom: 173px;
+    opacity: 1;
+    animation: movingGhostsDialog 3s linear 0s infinite alternate;
+}
+
+@keyframes movingGhostsDialog {
+    0% {transform: scale(0, 0); left: -20px;}
+    100% {transform: scale(1.0, 1.0); left: 50px;}
+}
+
+.ghostContainer img {
+    bottom: 0px;
+    width: 100px;
+}
+
+#stalinContainer {
+    left: 0px;
+    animation: movingGhosts 12s linear -12s infinite alternate;
+    transition-delay: 0s;
+}
+#leninContainer {
+    left: 0px;
+    animation: movingGhosts 12s linear 0s infinite alternate;
+    transition-delay: 0s;
+}
+
+#stalinContainer:hover {
+    transform: scale(3,3);
+    filter: invert(100%) hue-rotate(180deg);
+}
+#leninContainer:hover {
+    transform: scale(3,3);
+    filter: invert(100%) hue-rotate(180deg);
+}
+
+@keyframes movingGhosts {
+    0% {left: 0px;}
+    25% {left: 440px; transform: rotate(-30deg);}
+    50% {left: 880px; transform: rotate(40deg);}
+    100% {left: 1760px;}
+}
+/*Tredje scene slutt*/
+
+#greenButton {
+    left: 1525px;
+    bottom: 150px;
+    position: absolute;
+    width: 200px;
+    height: 140px;
+    z-index: 200;
+}
+
+/* navigasjonsmeny */
+
+#navigationMenu, #navigationBackground {
+    width: 300px;
+    height: 150px;
+}
+
+#navigationMenu {
+    left: 1400px;
+    bottom: 25px;
+    z-index: 10;
+}
+
+.destinationButton, .buttonArea {
+    height: 75px;
+    width: 300px;
+}
+.destinationButton {
+    z-index: 90;
+}
+
+.buttonArea {
+    z-index: 100;
+}
+
+#TokyoButton {
+    bottom: 75px;
+}
+#BerlinButton {
+    bottom: 0px;
+}
+
+.destinationLogo, .destinationFlag {
+    bottom: -68px;
+    width: 27px;
+}
+.destinationFlag {
+    left: 15px;
+}
+.destinationLogo {
+    left: 260px;
+}
+
+.destinationButton h3 {
+    left: 55px;
+    font-size: 10px;
+    bottom: 35px;
+}
+.destinationButton p {
+    left: 60px;
+    font-size: 16px;
+    bottom: -5px;
+}
+/*Navigasjonsmeny slutt*/
+
+/*Slutt Guros kode*/
+
